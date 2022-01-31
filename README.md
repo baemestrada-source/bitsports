@@ -297,6 +297,7 @@ mutation {
 
 resultado como este donde me dice si fue creada correctamente,
 
+```
 {
     "data": {
         "createProduct": {
