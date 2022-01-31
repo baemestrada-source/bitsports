@@ -476,6 +476,8 @@ https://github.com/lib/pq  -- paquete para conectar a posgresql
 
 https://golang.org/x/crypto/bcrypt -- paquete para encriptar la clave del usuario esta se guarda en la BD encriptada
 
+https://github.com/dgrijalva/jwt-go --paquete con el cual se genera el token al hacer login
+
 ## Base de datos  🖇️
 
 Se dejo el archivo docker-compose.yml ya este puede crear una imagen de la base de datos en postgres con la conexion que se utiliza en el proyecto
