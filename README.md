@@ -472,7 +472,9 @@ http://entgo.io/  -- sirve como ORM de la base de datos
 
 https://github.com/graphql-go/graphql -- sirve generar API con grapql
 
-la base de datos es
+https://github.com/lib/pq  -- paquete para conectar a posgresql
+
+https://golang.org/x/crypto/bcrypt -- paquete para encriptar la clave del usuario esta se guarda en la BD encriptada
 
 ## Base de datos  🖇️
 
