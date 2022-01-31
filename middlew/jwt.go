@@ -3,10 +3,8 @@ package middlew
 import (
 	"errors"
 	"strings"
-//	"log"
 	"time"
 	"net/http"
-	//"github.com/baemestrada-source/golang-redsocial/bd"
 	"github.com/graphql-go/handler"
 	"github.com/baemestrada-source/bitsports/models"
 	jwt "github.com/dgrijalva/jwt-go"
@@ -16,7 +14,6 @@ var JwtSecret []byte = []byte("pruebatecnica")
 
 /*ProcesoToken proceso token para extraer sus valores */
 func ProcesoToken(tk string) (*models.Claim, bool, string, error) {
-	//miClave := []byte("thepolyglotdeveloper")
 	claims := &models.Claim{}
 
 	splitToken := strings.Split(tk, "Bearer")
@@ -29,14 +26,7 @@ func ProcesoToken(tk string) (*models.Claim, bool, string, error) {
 	tkn, err := jwt.ParseWithClaims(tk, claims, func(token *jwt.Token) (interface{}, error) {
 		return JwtSecret, nil
 	})
-/*	if err == nil {
-		_, encontrado, _ := bd.ChequeoYaExisteUsuario(claims.Email)
-		if encontrado == true {
-			Email = claims.Email
-			IDUsuario = claims.ID.Hex()
-		}
-		return claims, encontrado, IDUsuario, nil
-	}*/
+
 	if !tkn.Valid {
 		return claims, false, string(""), errors.New("token Inválido")
 	}

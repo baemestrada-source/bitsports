@@ -29,8 +29,10 @@ func main() {
 		Pretty: true,
 		GraphiQL: true,
 	})
-
+	//inicio el path para mi graphql siempre que tenga el Token
 	http.Handle("/graphql", middlew.HttpHeaderMiddleware(h))
+	
+	//rutas directas por cada uno
 	http.HandleFunc("/product", middlew.ValidoJWT(handlers.Products))
 	http.HandleFunc("/categorie", middlew.ValidoJWT(handlers.Categories))
 	http.HandleFunc("/user", handlers.Users)

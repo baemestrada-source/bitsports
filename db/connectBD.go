@@ -11,7 +11,7 @@ var PosgresCN = ConectarBD()
 
 /*ConectarBD es la función que me permite conectar la BD */
 func ConectarBD() *ent.Client {
-	client, err := ent.Open("postgres","host=localhost port=5432 user=postgres dbname=postgres password=secure_pass_here sslmode=disable")
+	client, err := ent.Open("postgres","host=localhost port=5432 user=postgres dbname=postgres password=bitsports sslmode=disable")
 	if err != nil {
 		log.Fatal(err.Error())
 		return client
