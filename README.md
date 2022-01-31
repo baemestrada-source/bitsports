@@ -31,6 +31,8 @@ Ya con la base de datos montada, puede ejecutar el proyecto en el directorio del
 go run main.go
 ```
 
+y listo a probar!
+
 ## Ejecutando las pruebas ⚙️
 
 Para ejecutar el proyecto primero se debe registrar un usuario, puede utilizar postman metodo POST, un ejemplo
